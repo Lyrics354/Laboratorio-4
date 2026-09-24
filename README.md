@@ -44,8 +44,9 @@ para el manejo binario de imágenes.
 
 1. **Clonar el repositorio**
    ```
-   git clone <url-del-repositorio>
-   ```
+[   git clone <url-del-repositorio>
+](https://github.com/Lyrics354/Laboratorio-4.git)
+    ```
 
 2. **Configurar la base de datos**
    - Instalar MySQL Installer y MySQL Workbench.
@@ -79,5 +80,5 @@ para el manejo binario de imágenes.
 ## 📚 Referencias
 
 - Laboratorio: Introducción a Base de Datos con MySQL — Ing. Irina Fong
-- [MySQL Installer](https://dev.mysql.com/downloads/installer/)
+- Descarga del apk MySql: [MySQL Installer](https://dev.mysql.com/downloads/installer/)
 - Documentación oficial de [MySqlConnector](https://mysqlconnector.net/)
