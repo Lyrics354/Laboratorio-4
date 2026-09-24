@@ -43,19 +43,18 @@ para el manejo binario de imágenes.
 ## 🚀 Instrucciones de Ejecución / Uso
 
 1. **Clonar el repositorio**
-   ```
-[   git clone <url-del-repositorio>
-](https://github.com/Lyrics354/Laboratorio-4.git)
-    ```
+```
+https://github.com/Lyrics354/Laboratorio-4.git
+```
 
-2. **Configurar la base de datos**
+3. **Configurar la base de datos**
    - Instalar MySQL Installer y MySQL Workbench.
    - Verificar que el servicio de MySQL (`MySQL80` o el instalado) esté activo
      (`services.msc`) o que `MySQL Notifier` esté encendido.
    - Ejecutar el script `database/productos.sql` en MySQL Workbench para crear
      la base de datos `productosdb` y la tabla `productos`.
 
-3. **Configurar el entorno local**
+4. **Configurar el entorno local**
    - Abrir el proyecto en Visual Studio (Aplicación de Windows Forms, .NET).
    - Revisar la cadena de conexión en `Conexion.cs`:
      ```csharp
@@ -65,7 +64,7 @@ para el manejo binario de imágenes.
    - El paquete `MySqlConnector` se restaura automáticamente vía NuGet al
      compilar (no requiere instalación manual del Connector/NET).
 
-4. **Ejecutar el comando de arranque**
+5. **Ejecutar el comando de arranque**
    - Compilar y ejecutar con `F5` (o `Fn + F5` en laptops) desde Visual Studio.
 
 ## 👤 Autor y Contexto
