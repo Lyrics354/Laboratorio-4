@@ -73,6 +73,7 @@ https://github.com/Lyrics354/Laboratorio-4.git
 Laboratorio/
 ├── 01-CRUD_PRODUCTOS
 ├── 02-Guia para desarrollar esta asignacion (pdf)
+├── 03-Consulta SQL (Query - CRUD + Las 3 consultas) 
 └── README.md                         # Documentación del proyecto
 ```
 
