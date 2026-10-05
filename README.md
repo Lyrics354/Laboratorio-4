@@ -67,7 +67,7 @@ https://github.com/Lyrics354/Laboratorio-4.git
 5. **Ejecutar el comando de arranque**
    - Compilar y ejecutar con `F5` (o `Fn + F5` en laptops) desde Visual Studio.
 
-## Estructura de Carpetas o Directorios
+## 📁 Estructura de Carpetas o Directorios
 
 ```plaintext
 Laboratorio/
