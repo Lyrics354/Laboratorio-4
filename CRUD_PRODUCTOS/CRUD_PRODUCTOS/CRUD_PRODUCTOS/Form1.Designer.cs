@@ -49,17 +49,19 @@
             label7 = new Label();
             pictureBox1 = new PictureBox();
             dgvProductos = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            Nombre = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            colImagen = new DataGridViewImageColumn();
             btnGuardar = new Button();
             imageList1 = new ImageList(components);
             btnModificar = new Button();
             btnEliminar = new Button();
             btnLimpiar = new Button();
             btnSalir = new Button();
+            ID = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            colImagen = new DataGridViewImageColumn();
+            FechaC = new DataGridViewTextBoxColumn();
+            FechaM = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
@@ -246,7 +248,7 @@
             // dgvProductos
             // 
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProductos.Columns.AddRange(new DataGridViewColumn[] { ID, Nombre, Precio, Cantidad, colImagen });
+            dgvProductos.Columns.AddRange(new DataGridViewColumn[] { ID, Nombre, Precio, Cantidad, colImagen, FechaC, FechaM });
             dgvProductos.EditMode = DataGridViewEditMode.EditOnEnter;
             dgvProductos.Location = new Point(0, 427);
             dgvProductos.Margin = new Padding(3, 4, 3, 4);
@@ -257,42 +259,6 @@
             dgvProductos.TabIndex = 11;
             dgvProductos.CellClick += dgvProductos_CellContentClick;
             dgvProductos.CellContentClick += dgvProductos_CellContentClick;
-            // 
-            // ID
-            // 
-            ID.HeaderText = "ID";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
-            ID.Width = 125;
-            // 
-            // Nombre
-            // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.MinimumWidth = 6;
-            Nombre.Name = "Nombre";
-            Nombre.Width = 125;
-            // 
-            // Precio
-            // 
-            Precio.HeaderText = "Precio";
-            Precio.MinimumWidth = 6;
-            Precio.Name = "Precio";
-            Precio.Width = 125;
-            // 
-            // Cantidad
-            // 
-            Cantidad.HeaderText = "Cantidad";
-            Cantidad.MinimumWidth = 6;
-            Cantidad.Name = "Cantidad";
-            Cantidad.Width = 125;
-            // 
-            // colImagen
-            // 
-            colImagen.HeaderText = "Image";
-            colImagen.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            colImagen.MinimumWidth = 6;
-            colImagen.Name = "colImagen";
-            colImagen.Width = 125;
             // 
             // btnGuardar
             // 
@@ -388,6 +354,56 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
+            // ID
+            // 
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.Width = 125;
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            Nombre.Width = 125;
+            // 
+            // Precio
+            // 
+            Precio.HeaderText = "Precio";
+            Precio.MinimumWidth = 6;
+            Precio.Name = "Precio";
+            Precio.Width = 125;
+            // 
+            // Cantidad
+            // 
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.MinimumWidth = 6;
+            Cantidad.Name = "Cantidad";
+            Cantidad.Width = 125;
+            // 
+            // colImagen
+            // 
+            colImagen.HeaderText = "Image";
+            colImagen.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            colImagen.MinimumWidth = 6;
+            colImagen.Name = "colImagen";
+            colImagen.Width = 125;
+            // 
+            // FechaC
+            // 
+            FechaC.HeaderText = "Fecha de Creacion";
+            FechaC.MinimumWidth = 6;
+            FechaC.Name = "FechaC";
+            FechaC.Width = 125;
+            // 
+            // FechaM
+            // 
+            FechaM.HeaderText = "Fecha de Modificacion";
+            FechaM.MinimumWidth = 6;
+            FechaM.Name = "FechaM";
+            FechaM.Width = 125;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -455,12 +471,14 @@
         private ImageList imageList1;
         private PictureBox pictureBox3;
         private DataGridViewImageColumn Column1;
+        private DataGridViewImageColumn colImage;
+        private Button btnSalir;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Cantidad;
-        private DataGridViewImageColumn colImage;
         private DataGridViewImageColumn colImagen;
-        private Button btnSalir;
+        private DataGridViewTextBoxColumn FechaC;
+        private DataGridViewTextBoxColumn FechaM;
     }   
 }

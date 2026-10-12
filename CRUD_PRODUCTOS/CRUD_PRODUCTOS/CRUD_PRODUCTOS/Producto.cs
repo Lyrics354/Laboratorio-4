@@ -11,5 +11,7 @@ namespace CRUD_PRODUCTOS
         public decimal Precio { get; set; }
         public int Cantidad { get; set; }
         public byte[]? Imagen { get; set; }
+        public DateTime FechaC { get; set; }
+        public DateTime? FechaM { get; set; }
     }
 }

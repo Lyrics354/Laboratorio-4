@@ -18,6 +18,16 @@ namespace CRUD_PRODUCTOS
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (!dgvProductos.Columns.Contains("FechaC"))
+            {
+                dgvProductos.Columns.Add("FechaC", "Fecha creación");
+                dgvProductos.Columns.Add("FechaM", "Fecha modificación");
+
+                dgvProductos.Columns["FechaC"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+                dgvProductos.Columns["FechaM"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+                dgvProductos.Columns["FechaC"].ReadOnly = true;
+                dgvProductos.Columns["FechaM"].ReadOnly = true;
+            }
             cargarProductos();
         }
 
@@ -34,7 +44,7 @@ namespace CRUD_PRODUCTOS
             foreach (var prod in listaProductos)
             {
                 Image? img = ImagenHelper.ByteArrayToImage(prod.Imagen);
-                dgvProductos.Rows.Add(prod.Id, prod.Nombre, prod.Precio, prod.Cantidad, img);
+                dgvProductos.Rows.Add(prod.Id, prod.Nombre, prod.Precio, prod.Cantidad, img, prod.FechaC, prod.FechaM);
             }
         } // fin de cargarProductos
 

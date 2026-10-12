@@ -31,7 +31,7 @@ namespace CRUD_PRODUCTOS
         public static List<Producto> GetProductos(string filtro)
         {
             List<Producto> listaProductos = new List<Producto>();
-            string query = "SELECT id, nombre, precio, cantidad, imagen FROM productos";
+            string query = "SELECT id, nombre, precio, cantidad, imagen, FechaC, FechaM FROM productos";
 
             if (!string.IsNullOrEmpty(filtro))
             {
@@ -61,7 +61,8 @@ namespace CRUD_PRODUCTOS
                             prod.Precio = Convert.ToDecimal(mReader["precio"]);
                             prod.Cantidad = Convert.ToInt32(mReader["cantidad"]);
                             prod.Imagen = mReader["imagen"] != DBNull.Value ? (byte[])mReader["imagen"] : null;
-
+                            prod.FechaC = Convert.ToDateTime(mReader["FechaC"]);
+                            prod.FechaM = mReader["FechaM"] != DBNull.Value ? Convert.ToDateTime(mReader["FechaM"]) : null;
                             listaProductos.Add(prod);
                         }
                         mReader.Close();
